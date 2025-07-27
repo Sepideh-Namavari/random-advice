@@ -1,0 +1,101 @@
+:root {
+  --clr-dark-blue: #202733;
+  --clr-card-blue: #313a49;
+  --clr-neon-green: #53ffaa;
+  --clr-text: #cee3e9;
+  --fw-bold: 800;
+  --radius: 1rem;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Manrope", sans-serif;
+  background: var(--clr-dark-blue);
+  line-height: 1.6;
+}
+
+/* ---- card ---- */
+.card {
+  position: relative;
+  max-width: 34rem;         
+  margin-inline: 1.5rem;    
+  background: var(--clr-card-blue);
+  padding: 3.5rem 3rem 4.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.advice-id {
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+  color: var(--clr-neon-green);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.advice-text {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-text);
+  margin-bottom: 2rem;
+}
+
+/* divider */
+.divider img {
+  width: 100%;
+}
+
+/* dice button */
+.dice-btn {
+  --size: 4rem;
+
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  translate: -50% 0;
+
+  display: grid;
+  place-items: center;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: none;
+  background: var(--clr-neon-green);
+  color: var(--clr-card-blue);
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, rotate 0.6s;
+}
+
+.dice-btn:hover,
+.dice-btn:focus-visible {
+  box-shadow: 0 0 30px var(--clr-neon-green);
+  rotate: 360deg;
+  outline: none;
+}
+
+.dice-btn svg {
+  pointer-events: none; 
+}
+
+@media (max-width: 600px) {
+  .advice-text {
+    font-size: 1.5rem;
+  }
+}
