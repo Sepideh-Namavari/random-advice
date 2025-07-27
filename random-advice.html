@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advice Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./random-advice.css" />
+</head>
+<body>
+  <main class="card" role="region" aria-labelledby="advice-id">
+    <p id="advice-id" class="advice-id">ADVICE #<span>117</span></p>
+    <q id="advice-text" class="advice-text"
+      >“It is easy to sit up and take notice.  What’s difficult is getting up and
+      taking action.”</q
+    >
+
+    <!-- divider -->
+    <picture class="divider">
+      <!-- desktop divider -->
+      <source
+        srcset="https://raw.githubusercontent.com/frontendmentorio/advice-generator-app/main/images/pattern-divider-desktop.svg"
+        media="(min-width: 600px)"
+      />
+      <!-- mobile divider -->
+      <img
+        src="https://raw.githubusercontent.com/frontendmentorio/advice-generator-app/main/images/pattern-divider-mobile.svg"
+        alt=""
+      />
+    </picture>
+
+    <!-- dice button -->
+    <button class="dice-btn" aria-label="Get new advice">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M5 9h2v2H5V9zm0 4h2v2H5v-2zm4 0h2v2H9v-2zm4-4h2v2h-2V9zm-4-4h2v2H9V5zM5 5h2v2H5V5zm8 4h2v2h-2V9zm0 4h2v2h-2v-2zm4-4h2v2h-2V9z"
+        />
+      </svg>
+    </button>
+  </main>
+
+  <script src="./random-advice.js"></script>
+</body>
+</html>
